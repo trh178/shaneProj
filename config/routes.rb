@@ -1,7 +1,8 @@
 Shanes::Application.routes.draw do
-  get "pages/home"
 
-  get "pages/current"
+  match '/current', :to => 'pages#current'
+
+  root :to => 'pages#home'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
